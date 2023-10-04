@@ -1,5 +1,4 @@
 {
-  "packageJsonPath": "/home/akisarou/projects/my-nodejs-pnpm-test/packages/a/package.json",
   "name": "@my-nodejs-test/a",
   "version": "0.0.1",
   "types": "./src/index.ts",

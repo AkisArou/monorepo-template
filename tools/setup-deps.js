@@ -61,8 +61,11 @@ if (workspaceRoot) {
 
   // Iterate through each workspace.
   workspaces.forEach((workspace) => {
+    const packageJson = JSON.parse(
+      fs.readFileSync(workspace.packageJson.packageJsonPath, "utf8")
+    );
     // Extract properties from the workspace's package.json.
-    const { keywords, dependencies, devDependencies } = workspace.packageJson;
+    const { keywords, dependencies, devDependencies } = packageJson;
 
     if (!keywords) {
       return;
@@ -99,7 +102,7 @@ if (workspaceRoot) {
 
     // Create a new workspace package.json with updated dependencies.
     const newWorkspacePackageJSON = {
-      ...workspace.packageJson,
+      ...packageJson,
       dependencies: newDependencies,
       devDependencies: newDevDependencies,
     };
