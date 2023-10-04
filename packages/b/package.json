@@ -1,0 +1,9 @@
+{
+  "name": "@my-nodejs-test/b",
+  "version": "0.0.1",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@my-nodejs-test/a": "workspace:*"
+  }
+}

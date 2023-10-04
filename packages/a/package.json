@@ -1,0 +1,22 @@
+{
+  "packageJsonPath": "/home/akisarou/projects/my-nodejs-pnpm-test/packages/a/package.json",
+  "name": "@my-nodejs-test/a",
+  "version": "0.0.1",
+  "types": "./src/index.ts",
+  "module": "./src/index.ts",
+  "type": "module",
+  "keywords": [
+    "react"
+  ],
+  "dependencies": {
+    "zod": "*",
+    "react": "latest"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "zod": "*",
+    "react": "latest"
+  }
+}
