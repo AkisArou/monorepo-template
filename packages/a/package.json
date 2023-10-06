@@ -9,7 +9,8 @@
   ],
   "dependencies": {
     "zod": "*",
-    "react": "latest"
+    "react": "latest",
+    "rxjs": "latest"
   },
   "exports": {
     ".": "./src/index.ts"

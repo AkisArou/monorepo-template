@@ -19,6 +19,9 @@ importers:
         specifier: ^5.0.0
         version: 5.2.2
     devDependencies:
+      '@moonrepo/cli':
+        specifier: ^1.14.4
+        version: 1.14.4
       '@types/node':
         specifier: ^20.8.0
         version: 20.8.2
@@ -92,13 +95,15 @@ importers:
 
   packages/a:
     dependencies:
-      zod:
-        specifier: latest
-        version: 3.22.3
-    devDependencies:
       react:
         specifier: latest
         version: 18.2.0
+      rxjs:
+        specifier: latest
+        version: 7.8.1
+      zod:
+        specifier: latest
+        version: 3.22.4
 
   packages/b:
     dependencies:
@@ -406,6 +411,78 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
+
+  /@moonrepo/cli@1.14.4:
+    resolution: {integrity: sha512-UvIcWCOPiOYlkrjrtGWj7a+NSUKssZKwBBS1QF5Qn6Fu+hp1+NryvQ8XLAztNSXgyZpXjaQvgNOcO5dDd1Zn4Q==}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      detect-libc: 2.0.2
+    optionalDependencies:
+      '@moonrepo/core-linux-arm64-gnu': 1.14.4
+      '@moonrepo/core-linux-arm64-musl': 1.14.4
+      '@moonrepo/core-linux-x64-gnu': 1.14.4
+      '@moonrepo/core-linux-x64-musl': 1.14.4
+      '@moonrepo/core-macos-arm64': 1.14.4
+      '@moonrepo/core-macos-x64': 1.14.4
+      '@moonrepo/core-windows-x64-msvc': 1.14.4
+    dev: true
+
+  /@moonrepo/core-linux-arm64-gnu@1.14.4:
+    resolution: {integrity: sha512-cvyYScgcnBid08nvVDSsvxycf+7M3l83pXLHCSpWFc+yKRMQAFi2vCx82V3hdjASwAOAO17yb715b4XPe4pyzw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-linux-arm64-musl@1.14.4:
+    resolution: {integrity: sha512-4/7gHkzWM9q1y8SuG6ydfpAZW9m/uulk0xXGj0FWT+L+gBWpOK6IEd4J7+bBiIA1yoFl54znlSa/2qN/Prt8RQ==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-linux-x64-gnu@1.14.4:
+    resolution: {integrity: sha512-FRfU7Jdpa/bQki7GsRhbJdyUJR0ZgmEOl/7jeKX6FbFgiSTXuHa+TzdvQ1xob/ggOzaYbZHFYr3xDb+HQvd2cQ==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-linux-x64-musl@1.14.4:
+    resolution: {integrity: sha512-NOTw7NskCgOIq8mO4ZZ0IRr4gQRVI1HtBK2TjuUtFGpsTflXOhvYir368Hb3czsJEsXaWsjly0I3InfIZdxUfA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-macos-arm64@1.14.4:
+    resolution: {integrity: sha512-dheZQRJ+vwLUaOlYWDuIvkgh/Cn/HzmjFMPFD+Skt9Oyq9RLq2JzW3XPy+u7G++DPOaZdarivNgCBWex+/9xiQ==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-macos-x64@1.14.4:
+    resolution: {integrity: sha512-PQ8Aj5utaXhVR8egKAWgTIA0UkSQaj4w2R2pPsiIpDA4Fgn4Faqh4KnXys4O6U7aa70Oqou0SdaXIPb7+S6/2w==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@moonrepo/core-windows-x64-msvc@1.14.4:
+    resolution: {integrity: sha512-6ktlfeDrtvyD8Y67hmkS6vg6agXc+ZhKhiCOEoAi61FQ+Bk2sGmY+LEq17ye5YvKVmScEdtsaSre6zMZqNB2Xw==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1012,6 +1089,11 @@ packages:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
 
+  /detect-libc@2.0.2:
+    resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
+    engines: {node: '>=8'}
+    dev: true
+
   /didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
     dev: true
@@ -1458,6 +1540,7 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: false
 
   /js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -1517,6 +1600,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
 
   /lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
@@ -1804,6 +1888,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -2228,6 +2313,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod@3.22.3:
-    resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
     dev: false

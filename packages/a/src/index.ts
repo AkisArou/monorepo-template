@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { yeah } from "./lib/yeah";
+import { BehaviorSubject } from "rxjs";
 
 export function fromA(a: string) {
   yeah;
@@ -12,3 +13,5 @@ export const asd = z.object({
 });
 
 export type Asd = z.infer<typeof asd>;
+
+const r = new BehaviorSubject("");
