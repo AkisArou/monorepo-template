@@ -1,7 +1,9 @@
 {
   "name": "@my-nodejs-test/d",
   "version": "0.0.1",
-  "module": "index.ts",
+  "types": "./src/index.ts",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
   "type": "module",
   "dependencies": {
     "rxjs": "*"

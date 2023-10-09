@@ -1,16 +1,4 @@
 {
-  "compilerOptions": {
-    "lib": ["ESNext"],
-    "module": "ESNext",
-    "target": "ESnext",
-    "moduleResolution": "Bundler",
-    "composite": true,
-    "strict": true,
-    "downlevelIteration": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true
-  }
+  "extends": "../../tsconfig.options.json",
+  "include": ["**/*.ts"]
 }
