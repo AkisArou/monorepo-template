@@ -1,11 +1,13 @@
 {
-  "name": "@my-nodejs-test/d",
+  "name": "@packages/d",
   "version": "0.0.1",
   "types": "./src/index.ts",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "type": "module",
   "dependencies": {
-    "rxjs": "*"
+    "rxjs": "*",
+    "@packages/a": "*",
+    "@packages/tsconfig": "*"
   }
 }

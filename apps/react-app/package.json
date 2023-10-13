@@ -1,5 +1,5 @@
 {
-  "name": "@my-nodejs-test/react-app",
+  "name": "react-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,8 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@my-nodejs-test/a": "workspace:*",
-    "@my-nodejs-test/c": "workspace:*"
+    "@my-nodejs-test/a": "*",
+    "@my-nodejs-test/c": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

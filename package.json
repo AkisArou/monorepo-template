@@ -6,9 +6,12 @@
   "children": {
     "react": "package.react.json"
   },
-  "scripts": {
-    "preinstall": "pnpm add -w -D monorepo-tools && node ./tools/setup-deps"
-  },
+  "preinstall": "pnpm add -w -D monorepo-tools && node ./tools/setup-deps",
+  "scripts": {},
+  "workspaces": [
+    "packages/**",
+    "apps/**"
+  ],
   "pnpm": {
     "overrides": {
       "rxjs": "latest",
@@ -24,7 +27,8 @@
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
     "ts-node": "^10.9.1",
-    "workspace-tools": "^0.35.2"
+    "workspace-tools": "^0.35.2",
+    "@packages/tsconfig": "*"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

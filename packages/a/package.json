@@ -1,5 +1,5 @@
 {
-  "name": "@my-nodejs-test/a",
+  "name": "@packages/a",
   "version": "0.0.1",
   "types": "./src/index.ts",
   "main": "./src/index.ts",
@@ -11,7 +11,8 @@
   "dependencies": {
     "zod": "*",
     "react": "latest",
-    "rxjs": "latest"
+    "rxjs": "latest",
+    "@packages/tsconfig": "*"
   },
   "exports": {
     ".": "./src/index.ts"
