@@ -1,4 +1,7 @@
 {
   "extends": "@packages/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "checkJs": true
+  },
   "include": ["."]
 }

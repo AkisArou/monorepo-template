@@ -4,17 +4,13 @@ export function normalizePath(path: string): string {
   return path.split("/").slice(1).join("/");
 }
 
-export function getFirstLevelDirectoryNames(
-  path: string
-): ReadonlyArray<string> {
+export function getFirstLevelDirectoryNames(path: string): readonly string[] {
   return fs
     .readdirSync(path)
     .filter(name => fs.statSync(path + "/" + name).isDirectory());
 }
 
-export function getLastLevelDirectoryNames(
-  path: string
-): ReadonlyArray<string> {
+export function getLastLevelDirectoryNames(path: string): readonly string[] {
   const directories = fs
     .readdirSync(path)
     .filter(name => fs.statSync(path + "/" + name).isDirectory())
