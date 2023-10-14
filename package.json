@@ -14,11 +14,11 @@
     "apps/**"
   ],
   "overrides": {
-    "@types/node": "18.12.0",
+    "@types/node": "18.18.5",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "vite": "4.4.5",
-    "@babel/core": "7.20.0",
+    "@babel/core": "7.20.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.5",
@@ -32,6 +32,8 @@
     "lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache'",
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache'",
     "typecheck": "turbo typecheck"
+  },
+  "dependencies": {
   },
   "devDependencies": {
     "@packages/tsconfig": "*",
