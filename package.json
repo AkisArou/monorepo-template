@@ -1,21 +1,38 @@
 {
-  "name": "my-nodejs-test",
-  "version": "1.0.0",
+  "name": "nable-solutions",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "children": {
-    "react": "package.react.json"
+    "node": "./tools/package-json/package.node.json",
+    "react": "./tools/package-json/package.react.json",
+    "react-native": "./tools/package-json/package.react-native.json",
+    "react-native-app": "./tools/package-json/package.react-native-app.json"
   },
-  "preinstall": "node ./tools/setup-deps",
   "workspaces": [
     "packages/**",
     "apps/**"
   ],
   "overrides": {
-    "rxjs": "latest",
-    "zod": "latest"
+    "@types/node": "18.12.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "vite": "4.4.5",
+    "@babel/core": "7.20.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.72.5",
+    "expo": "49.0.13",
+    "expo-status-bar": "1.6.0"
   },
-  "scripts": {},
+  "preinstall": "node ./tools/setup-deps",
+  "scripts": {
+    "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache'",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache'",
+    "lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache'",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache'",
+    "typecheck": "turbo typecheck"
+  },
   "devDependencies": {
     "@packages/tsconfig": "*",
     "@packages/prettier-config": "*",

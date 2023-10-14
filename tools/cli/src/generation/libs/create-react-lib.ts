@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import { execSync } from "node:child_process";
 
 import { ReactLib } from "../../cli-options";
 import { inquireReactLibGenerationInputs } from "../project-input";
@@ -10,8 +10,6 @@ export async function createReactLib(selectedOption: typeof ReactLib) {
   const importPath = `@packages/${directory
     .replace("packages/", "")
     .replaceAll("/", "-")}-${workspaceName}`;
-
-  console.log({ importPath, directory });
 
   execSync(
     `pnpm moon generate react-lib ./${directory} -- --name '${importPath}' --private`,
@@ -26,3 +24,5 @@ export async function createReactLib(selectedOption: typeof ReactLib) {
   //   { stdio: "inherit" }
   // );
 }
+
+function generate(packageName: string, destinationDir: string) {}
