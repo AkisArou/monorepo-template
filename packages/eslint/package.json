@@ -1,0 +1,39 @@
+{
+  "name": "@packages/eslint-config",
+  "version": "0.2.0",
+  "private": true,
+  "license": "MIT",
+  "files": [
+    "./base.js",
+    "./dom.js",
+    "./node.js",
+    "./react-native.js",
+    "./react.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@next/eslint-plugin-next": "^13.5.4",
+    "@vercel/style-guide": "^5.0.0",
+    "eslint-config-turbo": "^1.10.12",
+    "eslint-plugin-mdx": "^2.2.0",
+    "eslint-plugin-storybook": "^0.6.13"
+  },
+  "devDependencies": {
+    "@packages/prettier-config": "*",
+    "@packages/tsconfig": "*",
+    "eslint": "*",
+    "typescript": "*"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./base.js"
+    ]
+  },
+  "prettier": "@acme/prettier-config"
+}

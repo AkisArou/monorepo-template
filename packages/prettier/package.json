@@ -1,0 +1,20 @@
+{
+  "name": "@packages/prettier-config",
+  "private": true,
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "prettier": "*",
+    "prettier-plugin-tailwindcss": "^0.5.4"
+  },
+  "devDependencies": {
+    "@packages/tsconfig": "*",
+    "typescript": "*"
+  },
+  "prettier": "@packages/prettier-config"
+}

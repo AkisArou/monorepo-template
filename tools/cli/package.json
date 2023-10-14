@@ -1,0 +1,23 @@
+{
+  "name": "tools-cli",
+  "version": "0.0.0",
+  "private": true,
+  "types": "./src/index.ts",
+  "module": "./src/index.ts",
+  "type": "module",
+  "keywords": [],
+  "devDependencies": {
+    "@types/inquirer": "^8.2.1",
+    "@types/inquirer-fuzzy-path": "2.3.6",
+    "@types/figlet": "^1.5.5"
+  },
+  "dependencies": {
+    "@packages/tsconfig": "*",
+    "inquirer": "^8.2.4",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "inquirer-tree-prompt": "^1.1.2",
+    "nanospinner": "^1.1.0",
+    "figlet": "^1.5.2",
+    "assert-never": "latest"
+  }
+}

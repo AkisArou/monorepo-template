@@ -6,7 +6,6 @@
   "module": "./src/index.ts",
   "type": "module",
   "dependencies": {
-    "rxjs": "*",
     "@packages/a": "*",
     "@packages/tsconfig": "*"
   }

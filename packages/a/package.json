@@ -9,16 +9,20 @@
     "react"
   ],
   "dependencies": {
-    "zod": "*",
-    "react": "latest",
-    "rxjs": "latest",
     "@packages/tsconfig": "*"
+  },
+  "devDependencies": {
+    "@packages/eslint-config": "*",
+    "@packages/prettier-config": "*"
   },
   "exports": {
     ".": "./src/index.ts"
   },
-  "devDependencies": {
-    "zod": "*",
-    "react": "latest"
-  }
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@packages/eslint-config/base"
+    ]
+  },
+  "prettier": "@packages/prettier-config"
 }
