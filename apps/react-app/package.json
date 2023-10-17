@@ -13,7 +13,8 @@
     "react": "*",
     "react-dom": "*",
     "@packages/a": "*",
-    "@packages/c": "*"
+    "@packages/c": "*",
+    "@packages/ui": "*"
   },
   "devDependencies": {
     "@types/react": "*",

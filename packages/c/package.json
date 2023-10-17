@@ -8,5 +8,8 @@
   "dependencies": {
     "@packages/a": "*",
     "@packages/tsconfig": "*"
+  },
+  "exports": {
+    ".": "./src/index.ts"
   }
 }

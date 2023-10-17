@@ -1,0 +1,29 @@
+{
+  "name": "node-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@packages/a": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@packages/tsconfig": "*",
+    "@packages/eslint-config": "*",
+    "@packages/prettier-config": "*",
+    "esbuild": "*",
+    "tsx": "*"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@packages/eslint-config/node"
+    ]
+  },
+  "prettier": "@packages/prettier-config"
+}

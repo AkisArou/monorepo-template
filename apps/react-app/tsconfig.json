@@ -4,6 +4,6 @@
     "useDefineForClassFields": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "tailwind.config.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

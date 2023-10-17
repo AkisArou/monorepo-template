@@ -1,12 +1,13 @@
-import { MyComponent } from "@packages/c";
 import "./App.css";
 import { fromA } from "@packages/a";
+import { MyButton } from "@packages/ui";
 
 function App() {
+  fromA("aaa");
+
   return (
     <div className="bg-red-500">
-      <MyComponent />
-      {fromA("vite!!!")}
+      <MyButton />
     </div>
   );
 }
