@@ -19,9 +19,12 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "vite": "*",
+    "@vitejs/plugin-react": "*",
     "@packages/tsconfig": "*",
     "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*"
+    "@packages/prettier-config": "*",
+    "@packages/tailwind-config": "*",
+    "tailwind": "*"
   },
   "eslintConfig": {
     "root": true,
@@ -30,5 +33,4 @@
     ]
   },
   "prettier": "@packages/prettier-config"
-
 }

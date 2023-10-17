@@ -1,0 +1,30 @@
+{
+  "name": "@packages/tailwind-config",
+  "version": "0.0.0",
+  "description": "reusable tailwind config",
+  "private": true,
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "postcss.js"
+  ],
+  "dependencies": {
+    "autoprefixer": "*",
+    "postcss": "*",
+    "tailwindcss": "*"
+  },
+  "devDependencies": {
+    "@packages/tsconfig": "*",
+    "@packages/eslint-config": "*",
+    "@packages/prettier-config": "*",
+    "eslint": "*",
+    "typescript": "*"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@packages/eslint-config/base"
+    ]
+  },
+  "prettier": "@packages/prettier-config"
+}

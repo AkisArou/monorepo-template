@@ -1,9 +1,9 @@
 {
-  "extends": "@packages/tsconfig/tsconfig.base.json",
+  "extends": "@packages/tsconfig/tsconfig.react.json",
   "compilerOptions": {
     "useDefineForClassFields": true,
     "resolveJsonModule": true
   },
-  "include": ["src"],
+  "include": ["src", "tailwind.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,6 +1,6 @@
-import { MyComponent } from "@my-nodejs-test/c";
+import { MyComponent } from "@packages/c";
 import "./App.css";
-import { fromA } from "@my-nodejs-test/a";
+import { fromA } from "@packages/a";
 
 function App() {
   return (
