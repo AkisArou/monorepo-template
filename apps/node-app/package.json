@@ -9,7 +9,15 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@packages/a": "*"
+    "@packages/a": "*",
+    "@sniptt/monads": "*",
+    "assert-never": "*",
+    "date-fns": "*",
+    "immer": "*",
+    "ramda": "*",
+    "rxjs": "*",
+    "zod": "*",
+    "@packages/tsconfig": "*"
   },
   "devDependencies": {
     "@types/node": "*",
@@ -17,7 +25,10 @@
     "@packages/eslint-config": "*",
     "@packages/prettier-config": "*",
     "esbuild": "*",
-    "tsx": "*"
+    "tsx": "*",
+    "@types/ramda": "*",
+    "ts-toolbelt": "*",
+    "typescript": "*"
   },
   "eslintConfig": {
     "root": true,

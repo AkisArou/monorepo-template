@@ -8,7 +8,32 @@
   "keywords": [
     "react"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@auth0/auth0-react": "*",
+    "@dnd-kit/core": "*",
+    "@react-google-maps/api": "*",
+    "@sentry/react": "*",
+    "@sentry/tracing": "*",
+    "@tanstack/react-router": "*",
+    "@tanstack/react-table": "*",
+    "@trpc/client": "*",
+    "clsx": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-icons": "*",
+    "react-router-dom": "*",
+    "react-virtual": "*",
+    "socket.io-client": "*",
+    "use-places-autocomplete": "*",
+    "@sniptt/monads": "*",
+    "assert-never": "*",
+    "date-fns": "*",
+    "immer": "*",
+    "ramda": "*",
+    "rxjs": "*",
+    "zod": "*",
+    "@packages/tsconfig": "*"
+  },
   "devDependencies": {
     "@packages/tsconfig": "*",
     "@packages/eslint-config": "*",
@@ -20,7 +45,11 @@
     "react-dom": "*",
     "tailwindcss": "*",
     "autoprefixer": "*",
-    "postcss": "*"
+    "postcss": "*",
+    "@types/react-router-dom": "*",
+    "@types/ramda": "*",
+    "ts-toolbelt": "*",
+    "typescript": "*"
   },
   "exports": {
     ".": "./src/index.ts"

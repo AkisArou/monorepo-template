@@ -1,33 +1,3 @@
-// {
-//   "$schema": "https://json.schemastore.org/tsconfig",
-//   "compilerOptions": {
-//     "lib": ["ESNext"],
-//     "module": "ESNext",
-//     "target": "ES2020",
-//     "moduleResolution": "NodeNext",
-//     "strict": true,
-//     "composite": true,
-//     "downlevelIteration": true,
-//     "skipLibCheck": true,
-//     "allowSyntheticDefaultImports": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "declaration": true,
-//     "esModuleInterop": true,
-//     "experimentalDecorators": false,
-//     "isolatedModules": true,
-//     "noEmitOnError": true,
-//     "noFallthroughCasesInSwitch": true,
-//     "noImplicitOverride": true,
-//     "noImplicitReturns": true,
-//     "noUnusedLocals": true,
-//     "pretty": true,
-//     "removeComments": false,
-//     "resolveJsonModule": false,
-//     "sourceMap": false,
-//     "verbatimModuleSyntax": true
-//   }
-// }
-
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {

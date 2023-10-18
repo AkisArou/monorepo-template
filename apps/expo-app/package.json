@@ -14,7 +14,15 @@
     "expo-status-bar": "*",
     "react": "*",
     "react-native": "*",
-    "@packages/a": "*"
+    "@packages/a": "*",
+    "@sniptt/monads": "*",
+    "assert-never": "*",
+    "date-fns": "*",
+    "immer": "*",
+    "ramda": "*",
+    "rxjs": "*",
+    "zod": "*",
+    "@packages/tsconfig": "*"
   },
   "devDependencies": {
     "@babel/core": "*",
@@ -22,7 +30,9 @@
     "typescript": "*",
     "@packages/tsconfig": "*",
     "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*"
+    "@packages/prettier-config": "*",
+    "@types/ramda": "*",
+    "ts-toolbelt": "*"
   },
   "eslintConfig": {
     "root": true,

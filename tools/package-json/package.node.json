@@ -1,7 +1,39 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "@azure/storage-blob": "*",
+    "@fastify/autoload": "*",
+    "@fastify/cors": "*",
+    "@fastify/sensible": "*",
+    "@prisma/client": "*",
+    "@trpc/server": "*",
+    "@types/mime": "*",
+    "@types/node-schedule": "*",
+    "@types/pg": "*",
+    "amqplib": "*",
+    "auth0-socketio": "*",
+    "bufferutil": "*",
+    "dotenv": "*",
+    "fastify": "*",
+    "fastify-auth0-verify": "*",
+    "fastify-formidable": "*",
+    "fastify-plugin": "*",
+    "fastify-type-provider-zod": "*",
+    "jose": "*",
+    "mime": "*",
+    "node-schedule": "*",
+    "pino": "*",
+    "pino-pretty": "*",
+    "postgres": "*",
+    "sharp": "*",
+    "soap": "*",
+    "socket.io": "*",
+    "superjson": "*",
+    "uuid": "*",
+    "wsdl-tsclient": "*"
+  },
   "devDependencies": {
+    "@types/amqplib": "*",
     "@types/node": "*",
-    "typescript": "*"
+    "prisma": "*"
   }
 }

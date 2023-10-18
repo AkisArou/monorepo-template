@@ -1,0 +1,23 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "types": "./src/index.ts",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "type": "module",
+  "keywords": [
+    "dom"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@packages/eslint-config/dom"
+    ]
+  },
+  "prettier": "@packages/prettier-config"
+}

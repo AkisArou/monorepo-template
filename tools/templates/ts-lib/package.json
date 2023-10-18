@@ -6,21 +6,17 @@
   "module": "./src/index.ts",
   "type": "module",
   "keywords": [
-    "react"
+    "ts"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "@packages/tsconfig": "*",
-    "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*"
-  },
+  "devDependencies": {},
   "exports": {
     ".": "./src/index.ts"
   },
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@packages/eslint-config/react"
+      "@packages/eslint-config/base"
     ]
   },
   "prettier": "@packages/prettier-config"

@@ -10,5 +10,23 @@
     "tsconfig.node.json",
     "tsconfig.react.json",
     "tsconfig.react-native.json"
-  ]
+  ],
+  "dependencies": {
+    "@sniptt/monads": "*",
+    "assert-never": "*",
+    "date-fns": "*",
+    "immer": "*",
+    "ramda": "*",
+    "rxjs": "*",
+    "zod": "*",
+    "@packages/tsconfig": "*"
+  },
+  "devDependencies": {
+    "@types/ramda": "*",
+    "ts-toolbelt": "*",
+    "typescript": "*",
+    "@packages/tsconfig": "*",
+    "@packages/eslint-config": "*",
+    "@packages/prettier-config": "*"
+  }
 }

@@ -11,14 +11,24 @@
   "dependencies": {
     "autoprefixer": "*",
     "postcss": "*",
-    "tailwindcss": "*"
+    "tailwindcss": "*",
+    "@sniptt/monads": "*",
+    "assert-never": "*",
+    "date-fns": "*",
+    "immer": "*",
+    "ramda": "*",
+    "rxjs": "*",
+    "zod": "*",
+    "@packages/tsconfig": "*"
   },
   "devDependencies": {
     "@packages/tsconfig": "*",
     "@packages/eslint-config": "*",
     "@packages/prettier-config": "*",
     "eslint": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "@types/ramda": "*",
+    "ts-toolbelt": "*"
   },
   "eslintConfig": {
     "root": true,

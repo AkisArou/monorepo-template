@@ -33,7 +33,7 @@ type PackageJSONChildren = Record<ChildName, ChildPath>;
  */
 
 // Get the list of workspaces in the current project.
-const workspaces = tools.getPnpmWorkspaces(process.cwd());
+const workspaces = tools.getWorkspaces(process.cwd());
 
 // Get the root of the workspace, if it exists.
 const workspaceRoot = tools.getWorkspaceRoot(process.cwd());
@@ -54,57 +54,77 @@ if (workspaceRoot) {
       return {
         name,
         path,
-        packageJson: JSON.parse(fs.readFileSync(path, "utf8")),
+        packageJson: JSON.parse(fs.readFileSync(path, "utf8"))
       };
     }
   );
 
+  const packageJsonBase = JSON.parse(
+    fs.readFileSync(
+      path.join(workspaceRoot, "tools", "package-json", "package.base.json"),
+      "utf8"
+    )
+  );
+
   // Iterate through each workspace.
-  workspaces.forEach((workspace) => {
+  workspaces.forEach(workspace => {
     const packageJson = JSON.parse(
       fs.readFileSync(workspace.packageJson.packageJsonPath, "utf8")
     );
-    // Extract properties from the workspace's package.json.
+    // Extract properties from the workspaces package.json.
     const { keywords, dependencies, devDependencies } = packageJson;
-
-    if (!keywords) {
-      return;
-    }
 
     let newDependencies = dependencies ?? {};
     let newDevDependencies = devDependencies ?? {};
 
-    // Iterate through keywords and update dependencies.
-    keywords.forEach((keyword) => {
-      const foundChild = childrenPackageJSONs.find((f) => f.name === keyword);
+    newDependencies = {
+      ...newDependencies,
+      ...packageJsonBase.dependencies
+    };
 
-      if (!foundChild) {
+    newDevDependencies = {
+      ...newDevDependencies,
+      ...packageJsonBase.devDependencies
+    };
+
+    // By keyword
+    (() => {
+      if (!keywords) {
         return;
       }
 
-      newDependencies = {
-        ...newDependencies,
-        ...foundChild.packageJson.dependencies,
-      };
+      // Iterate through keywords and update dependencies.
+      keywords.forEach(keyword => {
+        const foundChild = childrenPackageJSONs.find(f => f.name === keyword);
 
-      newDevDependencies = {
-        ...newDevDependencies,
-        ...foundChild.packageJson.devDependencies,
-      };
-    });
+        if (!foundChild) {
+          return;
+        }
 
-    if (
-      newDependencies === dependencies &&
-      newDevDependencies === devDependencies
-    ) {
-      return;
-    }
+        newDependencies = {
+          ...newDependencies,
+          ...foundChild.packageJson.dependencies
+        };
+
+        newDevDependencies = {
+          ...newDevDependencies,
+          ...foundChild.packageJson.devDependencies
+        };
+      });
+
+      if (
+        newDependencies === dependencies &&
+        newDevDependencies === devDependencies
+      ) {
+        return;
+      }
+    })();
 
     // Create a new workspace package.json with updated dependencies.
     const newWorkspacePackageJSON = {
       ...packageJson,
       dependencies: newDependencies,
-      devDependencies: newDevDependencies,
+      devDependencies: newDevDependencies
     };
 
     // Write the updated package.json back to its original file.

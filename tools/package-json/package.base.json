@@ -1,23 +1,13 @@
 {
-  "name": "@packages/c",
-  "version": "0.0.1",
-  "types": "./src/index.ts",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "type": "module",
   "dependencies": {
-    "@packages/a": "*",
-    "@packages/tsconfig": "*",
     "@sniptt/monads": "*",
     "assert-never": "*",
     "date-fns": "*",
     "immer": "*",
     "ramda": "*",
     "rxjs": "*",
-    "zod": "*"
-  },
-  "exports": {
-    ".": "./src/index.ts"
+    "zod": "*",
+    "@packages/tsconfig": "*"
   },
   "devDependencies": {
     "@types/ramda": "*",
