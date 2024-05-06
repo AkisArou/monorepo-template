@@ -1,64 +1,59 @@
 {
-  "name": "@packages/ui",
-  "version": "0.0.1",
-  "types": "./src/index.ts",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "type": "module",
-  "keywords": [
-    "react"
-  ],
-  "dependencies": {
-    "@auth0/auth0-react": "*",
-    "@dnd-kit/core": "*",
-    "@react-google-maps/api": "*",
-    "@sentry/react": "*",
-    "@sentry/tracing": "*",
-    "@tanstack/react-router": "*",
-    "@tanstack/react-table": "*",
-    "@trpc/client": "*",
-    "clsx": "*",
-    "react": "*",
-    "react-dom": "*",
-    "react-icons": "*",
-    "react-router-dom": "*",
-    "react-virtual": "*",
-    "socket.io-client": "*",
-    "use-places-autocomplete": "*",
-    "@sniptt/monads": "*",
-    "assert-never": "*",
-    "date-fns": "*",
-    "immer": "*",
-    "ramda": "*",
-    "rxjs": "*",
-    "zod": "*",
-    "@packages/tsconfig": "*"
-  },
-  "devDependencies": {
-    "@packages/tsconfig": "*",
-    "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*",
-    "@packages/tailwind-config": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "react": "*",
-    "react-dom": "*",
-    "tailwindcss": "*",
-    "autoprefixer": "*",
-    "postcss": "*",
-    "@types/react-router-dom": "*",
-    "@types/ramda": "*",
-    "ts-toolbelt": "*",
-    "typescript": "*"
-  },
-  "exports": {
-    ".": "./src/index.ts"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@packages/eslint-config/react"
-    ]
-  },
-  "prettier": "@packages/prettier-config"
+	"name": "@packages/ui",
+	"version": "0.0.1",
+	"types": "./src/index.ts",
+	"main": "./src/index.ts",
+	"module": "./src/index.ts",
+	"type": "module",
+	"keywords": ["react"],
+	"dependencies": {
+		"@auth0/auth0-react": "*",
+		"@dnd-kit/core": "*",
+		"@react-google-maps/api": "*",
+		"@sentry/react": "*",
+		"@sentry/tracing": "*",
+		"@tanstack/react-router": "*",
+		"@tanstack/react-table": "*",
+		"@trpc/client": "*",
+		"clsx": "*",
+		"react": "*",
+		"react-dom": "*",
+		"react-icons": "*",
+		"react-router-dom": "*",
+		"react-virtual": "*",
+		"socket.io-client": "*",
+		"use-places-autocomplete": "*",
+		"@sniptt/monads": "*",
+		"assert-never": "*",
+		"date-fns": "*",
+		"immer": "*",
+		"ramda": "*",
+		"rxjs": "*",
+		"zod": "*",
+		"@config/tsconfig": "*"
+	},
+	"devDependencies": {
+		"@config/eslint-config": "*",
+		"@config/prettier-config": "*",
+		"@config/tailwind-config": "*",
+		"@types/react": "*",
+		"@types/react-dom": "*",
+		"react": "*",
+		"react-dom": "*",
+		"tailwindcss": "*",
+		"autoprefixer": "*",
+		"postcss": "*",
+		"@types/react-router-dom": "*",
+		"@types/ramda": "*",
+		"ts-toolbelt": "*",
+		"typescript": "*"
+	},
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"eslintConfig": {
+		"root": true,
+		"extends": ["@config/eslint-config/react"]
+	},
+	"prettier": "@config/prettier-config"
 }

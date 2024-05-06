@@ -1,0 +1,14 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": ["./tsconfig.base.json"],
+	"compilerOptions": {
+		"lib": ["DOM", "DOM.Iterable", "ESNext.Intl", "ESNext"],
+		"jsx": "react-native"
+	},
+	"exclude": [
+		"node_modules",
+		"babel.config.js",
+		"metro.config.js",
+		"jest.config.js"
+	]
+}

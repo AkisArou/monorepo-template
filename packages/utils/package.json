@@ -1,0 +1,21 @@
+{
+	"name": "@packages/utils",
+	"version": "0.0.1",
+	"types": "./src/index.ts",
+	"main": "./src/index.ts",
+	"module": "./src/index.ts",
+	"type": "module",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/ramda": "*",
+		"typescript": "*",
+		"@config/tsconfig": "*",
+		"@config/eslint-config": "*",
+		"@config/prettier-config": "*"
+	},
+	"eslintConfig": {
+		"root": true,
+		"extends": ["@config/eslint-config/react"]
+	},
+	"prettier": "@config/prettier-config"
+}

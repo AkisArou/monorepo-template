@@ -1,45 +1,48 @@
 {
-  "name": "expo-app",
-  "private": true,
-  "version": "0.0.0",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "*",
-    "expo-status-bar": "*",
-    "react": "*",
-    "react-native": "*",
-    "@packages/a": "*",
-    "@sniptt/monads": "*",
-    "assert-never": "*",
-    "date-fns": "*",
-    "immer": "*",
-    "ramda": "*",
-    "rxjs": "*",
-    "zod": "*",
-    "@packages/tsconfig": "*"
-  },
-  "devDependencies": {
-    "@babel/core": "*",
-    "@types/react": "*",
-    "typescript": "*",
-    "@packages/tsconfig": "*",
-    "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*",
-    "@types/ramda": "*",
-    "ts-toolbelt": "*"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@packages/eslint-config/react-native"
-    ]
-  },
-  "prettier": "@packages/prettier-config"
+	"name": "expo-app",
+	"private": true,
+	"version": "0.0.0",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"build:android:dev": "npx eas build -p android -e development",
+		"build:android:prod": "npx eas build -p android -e production",
+		"build:ios:prod": "npx eas build -p ios -e production",
+		"submit:ios": "eas submit -p ios -e production",
+		"version-check": "npx expo install --check"
+	},
+	"dependencies": {
+		"expo": "*",
+		"expo-status-bar": "*",
+		"react": "*",
+		"react-native": "*",
+		"@packages/utils": "*",
+		"@sniptt/monads": "*",
+		"assert-never": "*",
+		"date-fns": "*",
+		"immer": "*",
+		"ramda": "*",
+		"rxjs": "*",
+		"zod": "*",
+		"@config/tsconfig": "*"
+	},
+	"devDependencies": {
+		"@babel/core": "*",
+		"@types/react": "*",
+		"typescript": "*",
+		"@config/tsconfig": "*",
+		"@config/eslint-config": "*",
+		"@config/prettier-config": "*",
+		"@types/ramda": "*",
+		"ts-toolbelt": "*"
+	},
+	"eslintConfig": {
+		"root": true,
+		"extends": ["@config/eslint-config/react-native"]
+	},
+	"prettier": "@config/prettier-config"
 }

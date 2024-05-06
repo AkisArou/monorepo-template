@@ -1,48 +1,44 @@
 {
-  "name": "react-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "*",
-    "react-dom": "*",
-    "@packages/a": "*",
-    "@packages/c": "*",
-    "@packages/ui": "*",
-    "@sniptt/monads": "*",
-    "assert-never": "*",
-    "date-fns": "*",
-    "immer": "*",
-    "ramda": "*",
-    "rxjs": "*",
-    "zod": "*",
-    "@packages/tsconfig": "*"
-  },
-  "devDependencies": {
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "vite": "*",
-    "@vitejs/plugin-react": "*",
-    "@packages/tsconfig": "*",
-    "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*",
-    "@packages/tailwind-config": "*",
-    "tailwind": "*",
-    "@types/ramda": "*",
-    "ts-toolbelt": "*",
-    "typescript": "*"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@packages/eslint-config/react"
-    ]
-  },
-  "prettier": "@packages/prettier-config"
+	"name": "react-app",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "*",
+		"react-dom": "*",
+		"@packages/ui": "*",
+		"@packages/utils": "*",
+		"@sniptt/monads": "*",
+		"assert-never": "*",
+		"date-fns": "*",
+		"immer": "*",
+		"ramda": "*",
+		"rxjs": "*",
+		"zod": "*",
+		"@config/tsconfig": "*"
+	},
+	"devDependencies": {
+		"@types/react": "*",
+		"@types/react-dom": "*",
+		"vite": "*",
+		"@vitejs/plugin-react": "*",
+		"@config/eslint-config": "*",
+		"@config/prettier-config": "*",
+		"@config/tailwind-config": "*",
+		"tailwind": "*",
+		"@types/ramda": "*",
+		"ts-toolbelt": "*",
+		"typescript": "*"
+	},
+	"eslintConfig": {
+		"root": true,
+		"extends": ["@config/eslint-config/react"]
+	},
+	"prettier": "@config/prettier-config"
 }

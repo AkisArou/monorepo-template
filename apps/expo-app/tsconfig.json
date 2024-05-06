@@ -1,5 +1,5 @@
 {
-  "extends": "@packages/tsconfig/tsconfig.react-native.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+	"extends": "@config/tsconfig/tsconfig.react-native.json",
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["node_modules"]
 }

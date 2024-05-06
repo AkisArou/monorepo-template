@@ -1,15 +1,13 @@
 import "./App.css";
-import { fromA } from "@packages/a";
-import { MyButton } from "@packages/ui";
+import { Button } from "@packages/ui";
+import { sayHello } from "@packages/utils";
 
 function App() {
-  fromA("aaa");
-
-  return (
-    <div className="bg-red-500">
-      <MyButton />
-    </div>
-  );
+	return (
+		<div className="bg-red-500">
+			<Button>{sayHello()}</Button>
+		</div>
+	);
 }
 
 export default App;

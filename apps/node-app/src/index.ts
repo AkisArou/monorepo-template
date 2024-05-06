@@ -1,3 +1,3 @@
-import { fromA } from "@packages/a";
+import { sayHello } from "@packages/utils";
 
-console.log(`asdasd ${fromA(":))))))))))")}`);
+console.log(sayHello());

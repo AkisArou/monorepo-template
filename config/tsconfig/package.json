@@ -1,0 +1,29 @@
+{
+	"name": "@config/tsconfig",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"keywords": [],
+	"files": [
+		"tsconfig.base.json",
+		"tsconfig.dom.json",
+		"tsconfig.node.json",
+		"tsconfig.react.json",
+		"tsconfig.react-native.json"
+	],
+	"dependencies": {
+		"@sniptt/monads": "*",
+		"assert-never": "*",
+		"date-fns": "*",
+		"immer": "*",
+		"ramda": "*",
+		"rxjs": "*",
+		"zod": "*"
+	},
+	"devDependencies": {
+		"@types/ramda": "*",
+		"ts-toolbelt": "*",
+		"typescript": "*",
+		"@config/prettier-config": "*"
+	}
+}

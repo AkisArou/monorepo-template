@@ -1,40 +1,26 @@
 {
-  "name": "node-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
-  },
-  "dependencies": {
-    "@packages/a": "*",
-    "@sniptt/monads": "*",
-    "assert-never": "*",
-    "date-fns": "*",
-    "immer": "*",
-    "ramda": "*",
-    "rxjs": "*",
-    "zod": "*",
-    "@packages/tsconfig": "*"
-  },
-  "devDependencies": {
-    "@types/node": "*",
-    "@packages/tsconfig": "*",
-    "@packages/eslint-config": "*",
-    "@packages/prettier-config": "*",
-    "esbuild": "*",
-    "tsx": "*",
-    "@types/ramda": "*",
-    "ts-toolbelt": "*",
-    "typescript": "*"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@packages/eslint-config/node"
-    ]
-  },
-  "prettier": "@packages/prettier-config"
+	"name": "node-app",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx --inspect=0.0.0.0:9228 --watch --env-file=.env ./src/index.ts",
+		"build": "rollup -c"
+	},
+	"dependencies": {
+		"@packages/utils": "*",
+		"@config/tsconfig": "*"
+	},
+	"devDependencies": {
+		"@types/node": "*",
+		"tsx": "*",
+		"ts-toolbelt": "*",
+		"typescript": "*",
+		"rollup": "*"
+	},
+	"eslintConfig": {
+		"root": true,
+		"extends": ["@config/eslint-config/node"]
+	},
+	"prettier": "@config/prettier-config"
 }
