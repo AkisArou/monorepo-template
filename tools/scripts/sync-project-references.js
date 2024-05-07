@@ -1,7 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import * as tools from "workspace-tools";
-import { isInternalWorkspace } from "./util/is-internal-workspace.js";
+
+export function isInternalWorkspace(packageName) {
+	return packageName.startsWith("@packages/");
+}
 
 export const jsonUtil = {
 	read(path) {

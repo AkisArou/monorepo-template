@@ -3,6 +3,7 @@
 This is more like an example, reference, or starting point for a monorepo, constructed after much research
 It is not well-written for now. (I mean this README file). The folder structure is kept simple, but there is an example found below for more advanced use cases.
 Both npm workspaces and ts project references are used.
+After reading this file, navigate to each app and lib to see the implementation
 
 ## Goals
 

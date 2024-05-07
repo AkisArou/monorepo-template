@@ -1,4 +1,14 @@
 {
-	"extends": "@config/tsconfig/tsconfig.node.json",
-	"include": ["src/**/*.ts"]
+  "extends": "@config/tsconfig/tsconfig.node.json",
+  "include": [
+    "src/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../../packages/utils"
+    }
+  ],
+  "compilerOptions": {
+    "outDir": "./dist"
+  }
 }

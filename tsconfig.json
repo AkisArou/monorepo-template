@@ -1,4 +1,21 @@
 {
-	"files": [],
-	"include": []
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "packages/ui"
+    },
+    {
+      "path": "packages/utils"
+    },
+    {
+      "path": "apps/expo-app"
+    },
+    {
+      "path": "apps/node-app"
+    },
+    {
+      "path": "apps/react-app"
+    }
+  ]
 }

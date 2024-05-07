@@ -1,13 +1,13 @@
 {
-	"name": "@packages/utils",
-	"version": "0.0.1",
-	"types": "./dist/index.d.ts",
-	"main": "./src/index.ts",
-	"module": "./src/index.ts",
-	"type": "module",
-	"dependencies": {},
-	"devDependencies": {
-		"typescript": "*",
-		"@config/tsconfig": "*"
-	}
+  "name": "@packages/utils",
+  "version": "0.0.1",
+  "types": "./dist/src/index.d.ts",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "*",
+    "@config/tsconfig": "*"
+  }
 }

@@ -1,19 +1,21 @@
 {
-	"name": "@packages/ui",
-	"type": "module",
-	"version": "0.0.1",
-	"types": "./src/index.ts",
-	"main": "./src/index.ts",
-	"module": "./src/index.ts",
-	"keywords": ["react"],
-	"dependencies": {
-		"react": "*",
-		"react-dom": "*"
-	},
-	"devDependencies": {
-		"@config/tsconfig": "*",
-		"@types/react": "*",
-		"@types/react-dom": "*",
-		"typescript": "*"
-	}
+  "name": "@packages/ui",
+  "type": "module",
+  "version": "0.0.1",
+  "types": "./dist/src/index.d.ts",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "keywords": [
+    "react"
+  ],
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@config/tsconfig": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "typescript": "*"
+  }
 }

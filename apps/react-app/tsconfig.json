@@ -1,9 +1,20 @@
 {
-	"extends": "@config/tsconfig/tsconfig.react.json",
-	"compilerOptions": {
-		"useDefineForClassFields": true,
-		"resolveJsonModule": true
-	},
-	"include": ["src/**/*.ts", "src/**/*.tsx"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+  "extends": "@config/tsconfig/tsconfig.react.json",
+  "compilerOptions": {
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "references": [
+    {
+      "path": "../../packages/ui"
+    },
+    {
+      "path": "../../packages/utils"
+    }
+  ]
 }
