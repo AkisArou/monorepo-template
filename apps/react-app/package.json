@@ -12,32 +12,16 @@
 		"react": "*",
 		"react-dom": "*",
 		"@packages/ui": "*",
-		"@packages/utils": "*",
-		"@sniptt/monads": "*",
-		"assert-never": "*",
-		"date-fns": "*",
-		"immer": "*",
-		"ramda": "*",
-		"rxjs": "*",
-		"zod": "*",
-		"@config/tsconfig": "*"
+		"@packages/utils": "*"
 	},
 	"devDependencies": {
+		"@config/tsconfig": "*",
 		"@types/react": "*",
 		"@types/react-dom": "*",
 		"vite": "*",
 		"@vitejs/plugin-react": "*",
-		"@config/eslint-config": "*",
-		"@config/prettier-config": "*",
 		"@config/tailwind-config": "*",
 		"tailwind": "*",
-		"@types/ramda": "*",
-		"ts-toolbelt": "*",
 		"typescript": "*"
-	},
-	"eslintConfig": {
-		"root": true,
-		"extends": ["@config/eslint-config/react"]
-	},
-	"prettier": "@config/prettier-config"
+	}
 }

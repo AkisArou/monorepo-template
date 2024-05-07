@@ -18,12 +18,7 @@ if (!workspaceRoot) {
 	throw new Error("No workspace root found");
 }
 
-const omittedWorkspaceNames = [
-	"@config/eslint-config",
-	"@config/prettier-config",
-	"@config/tailwind-config",
-	"@config/tsconfig",
-];
+const omittedWorkspaceNames = ["@config/tailwind-config", "@config/tsconfig"];
 
 const workspaces = tools
 	.getWorkspaces(workspaceRoot)

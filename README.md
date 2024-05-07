@@ -1,6 +1,36 @@
-# Modern TypeScript & Npm Workspaces Monorepo Example
+# Modern TypeScript & Npm Workspaces Monorepo Example/Guide
 
-This is more like an example, reference, or starting point for a monorepo, constructed after much research with a goal of being a modern setup, with great DX (TypeScript speed is the greatest goal). It is not well-written for now. (I mean this README file). The folder structure is kept simple, but there is an example found below for more advanced use cases.
+This is more like an example, reference, or starting point for a monorepo, constructed after much research
+It is not well-written for now. (I mean this README file). The folder structure is kept simple, but there is an example found below for more advanced use cases.
+Both npm workspaces and ts project references are used.
+
+## Goals
+
+- Modern setup
+- Great DX (TypeScript speed is the greatest goal).
+- Each app/lib, based on its type (node, react, react-native, dom, vanilla ts) should have access to types it needs via shared tsconfigs to extend from.
+
+  - node app/lib
+
+    ```json
+    //tsconfig.json
+    "compilerOptions": {
+    	"types": ["node"]
+    }
+    ```
+
+  - react app/lib
+
+  ```json
+    //tsconfig.json
+  "compilerOptions": {
+  	"lib": ["DOM", "DOM.Iterable", "ESNext.Intl", "ESNext"],
+  	"jsx": "react-jsx",
+  	"types": ["vite/client"]
+  }
+  ```
+
+- Each app/lib should have its dependencies explicitly declared in package.json, so a node app cannot import an irrelevant react-native dependency.
 
 ## Features
 
@@ -26,6 +56,8 @@ This is more like an example, reference, or starting point for a monorepo, const
   set "types" in package.json to point to the generated index.d.ts, watch-build the lib, and you should have a decent setup, with instant feedback from "fast" types when changed,
   by using the ts source files and behind the scenes d.ts file generation for all libs except tRPC including workspace.
   Watch-build should build only declaration files. Check at the section bellow to see why
+
+> Note: `If you have a better approach for the problems mentioned above, please contact`
 
 - **Npm Workspaces**: npm is used instead of other corepack package managers. I found pnpm to be slow when installing a local npm workspace.
 
@@ -73,8 +105,17 @@ packages/
 
 You can also check [nx](https://nx.dev/concepts/more-concepts/grouping-libraries) documentation
 
+**Templates**:
+You can use nx or turborepo or some other way of creating new libraries.
+I found out that copy-pasting a lib is enough.
+
 **Node version manager**:
 [asdf](https://asdf-vm.com/)
+
+**Write scripts**:
+Do not hesitate to write scripts, and attach them to a npm lifecycle script.
+E.g. I have a script that modifies every lib's dependencies, based on the package.json "keywords" field (I have set the type of the app there, react, node etc..) so I update them with default dependencies.
+Be creative when no official solution exists.
 
 **Prisma-orm**
 

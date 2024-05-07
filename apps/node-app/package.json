@@ -16,10 +16,5 @@
 		"tsx": "*",
 		"typescript": "*",
 		"rollup": "*"
-	},
-	"eslintConfig": {
-		"root": true,
-		"extends": ["@config/eslint-config/node"]
-	},
-	"prettier": "@config/prettier-config"
+	}
 }
