@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "tsx --inspect=0.0.0.0:9228 --watch --env-file=.env ./src/index.ts",
-		"build": "rollup -c"
+		"build": "tsc -b && rollup -c"
 	},
 	"dependencies": {
 		"@packages/utils": "*",
@@ -14,7 +14,6 @@
 	"devDependencies": {
 		"@types/node": "*",
 		"tsx": "*",
-		"ts-toolbelt": "*",
 		"typescript": "*",
 		"rollup": "*"
 	},

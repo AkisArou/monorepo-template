@@ -10,8 +10,8 @@
 		"ios": "expo start --ios",
 		"web": "expo start --web",
 		"build:android:dev": "npx eas build -p android -e development",
-		"build:android:prod": "npx eas build -p android -e production",
-		"build:ios:prod": "npx eas build -p ios -e production",
+		"build:android:prod": "tsc -b && npx eas build -p android -e production",
+		"build:ios:prod": "tsc -b && npx eas build -p ios -e production",
 		"submit:ios": "eas submit -p ios -e production",
 		"version-check": "npx expo install --check"
 	},
@@ -20,29 +20,12 @@
 		"expo-status-bar": "*",
 		"react": "*",
 		"react-native": "*",
-		"@packages/utils": "*",
-		"@sniptt/monads": "*",
-		"assert-never": "*",
-		"date-fns": "*",
-		"immer": "*",
-		"ramda": "*",
-		"rxjs": "*",
-		"zod": "*",
-		"@config/tsconfig": "*"
+		"@packages/utils": "*"
 	},
 	"devDependencies": {
 		"@babel/core": "*",
 		"@types/react": "*",
 		"typescript": "*",
-		"@config/tsconfig": "*",
-		"@config/eslint-config": "*",
-		"@config/prettier-config": "*",
-		"@types/ramda": "*",
-		"ts-toolbelt": "*"
-	},
-	"eslintConfig": {
-		"root": true,
-		"extends": ["@config/eslint-config/react-native"]
-	},
-	"prettier": "@config/prettier-config"
+		"@config/tsconfig": "*"
+	}
 }

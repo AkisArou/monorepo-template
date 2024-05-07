@@ -8,27 +8,10 @@
 	"dependencies": {
 		"autoprefixer": "*",
 		"postcss": "*",
-		"tailwindcss": "*",
-		"@sniptt/monads": "*",
-		"assert-never": "*",
-		"date-fns": "*",
-		"immer": "*",
-		"ramda": "*",
-		"rxjs": "*",
-		"zod": "*",
-		"@config/tsconfig": "*"
+		"tailwindcss": "*"
 	},
 	"devDependencies": {
-		"@config/eslint-config": "*",
-		"@config/prettier-config": "*",
-		"eslint": "*",
-		"typescript": "*",
-		"@types/ramda": "*",
-		"ts-toolbelt": "*"
-	},
-	"eslintConfig": {
-		"root": true,
-		"extends": ["@config/eslint-config/base"]
-	},
-	"prettier": "@config/prettier-config"
+		"@config/tsconfig": "*",
+		"typescript": "*"
+	}
 }
