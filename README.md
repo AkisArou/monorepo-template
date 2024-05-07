@@ -63,6 +63,7 @@ After reading this file, navigate to each app and lib to see the implementation
 - **Npm Workspaces**: npm is used instead of other corepack package managers. I found pnpm to be slow when installing a local npm workspace.
 
 - **Single Version Policy for Dependencies**: Node module versions in parent package.json in "overrides" field for single place dependency management.
+(This may cause some problems with other third party dependencies. you can check out [syncpack](https://jamiemason.github.io/syncpack/))
 
 - **Debugging**: VSCode debug setup for node & browser. Expo not tested.
 
