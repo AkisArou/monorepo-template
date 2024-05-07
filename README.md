@@ -144,7 +144,7 @@ If you have a structure like this:
 /packages/MY-APP-1/ui-lib-two
 ```
 
-you can setup tailwind like this in vscode (this is lua-nvim though, check tailwind docs):
+you can setup tailwind like this in vscode:
 Make a tailwind config file specific for an app in packages like shown below.
 Export the config file and extend the tailwind config in the app specific tailwind config in app directory.
 Then declare to tailwind config the following:
